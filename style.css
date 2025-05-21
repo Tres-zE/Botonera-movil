@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav#botoneraMovil {
+  position: absolute;
+  width: 90%;
+  height: auto;
+  background: white;
+  top: 50px;
+  left: 0px;
+}
+
+nav#botoneraMovil ul li {
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+  background: #ccc;
+  border: 1px solid white;
+}
+
+label#labelMovil span {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: url(../img/menu-2.png) no-repeat center;
+  margin: 5px;
+}
+
+input#menuMovil {
+  display: none;
+}
