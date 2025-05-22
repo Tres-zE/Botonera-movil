@@ -12,7 +12,8 @@ nav#botoneraMovil {
   height: auto;
   background: white;
   top: 50px;
-  left: 0px;
+  left: -100%;
+  transition: left 0.5s;
 }
 
 nav#botoneraMovil ul li {
@@ -23,14 +24,45 @@ nav#botoneraMovil ul li {
   border: 1px solid white;
 }
 
+nav#botoneraMovil ul li:hover {
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+  background: #aaa;
+  border: 1px solid white;
+}
+/*puede ser background size: 40px 40px ó contain*/
 label#labelMovil span {
   position: absolute;
   width: 40px;
   height: 40px;
-  background: url(../img/menu-2.png) no-repeat center;
+  background: url(../img/menu1.png) no-repeat;
+  background-size: 40px 40px;
   margin: 5px;
+  cursor: pointer;
 }
 
-input#menuMovil {
+input#botonMovil {
   display: none;
+}
+
+label#labelMovil h2 {
+  position: absolute;
+  top: 10px;
+  left: 60px;
+}
+
+label#labelMovil span:hover {
+  background: url(../img/menu2.png) no-repeat;
+  background-size: 40px 40px;
+}
+/*Selector avanzado ó adyacente: '+', nos sirve para que cuando haya una interaccion, en este caso un click dentro del icono, esté cambie de color */
+input#botonMovil:checked + label#labelMovil span {
+  background: url(../img/menu3.png) no-repeat;
+  background-size: 40px 40px;
+}
+
+/*Selector avanzado-hermano sombrerillo: puede llamar a cualquier elemento no ordenado pero que este debajo del input*/
+input#botonMovil:checked ~ nav#botoneraMovil {
+  left: 0px;
 }
